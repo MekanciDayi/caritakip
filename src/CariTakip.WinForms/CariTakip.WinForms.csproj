@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationTitle>Cari Takip</ApplicationTitle>
+    <AssemblyName>CariTakip</AssemblyName>
+    <RootNamespace>CariTakip</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="Exists('Assets\\app.ico')">
+    <ApplicationIcon>Assets\\app.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="Exists('Assets\\app.ico')">
+    <Content Include="Assets\\app.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Link>app.ico</Link>
+    </Content>
+  </ItemGroup>
+
+</Project>
